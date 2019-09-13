@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block main %}
+
+{{ event['Sport'] }}
+{{ event['Liga'] }}
+{{ event['Opp1'] }}
+{{ event['Opp2'] }}
+<h3>{{ event['FullScore'] }}</h3>
+    <iframe src="{{ event['Url'] }}" width="800px" height="600px">Ваш браузер не поддерживает плавающие фреймы!</iframe>
+
+{#{{ event['Opp2'] }}#}
+
+{% endblock %}

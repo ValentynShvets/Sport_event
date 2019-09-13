@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block main %}
+    {% if event %}
+{% for eve in event %}
+
+{#{{ eve['Sport'] }}#}
+{#{{ eve['Liga'] }}#}
+{#{{ eve['Opp1'] }}#}
+{#{{ eve['Opp2'] }}#}
+        <a href="event/{{ eve['Url'].replace('https://live-stream365.com/online/84bd360faa5112bad32d69407a25e53d/','')}}">{{ eve['Sport']}} {{eve['Liga']}} {{eve['Opp1']}} {{eve['Opp2'] }}</a><br>
+    <h3>Счет:{{ eve['FullScore'] }}</h3>
+
+{#    <iframe src="{{ event['Url'] }}" width="800px" height="600px">Ваш браузер не поддерживает плавающие фреймы!</iframe>#}
+
+{#{{ event['Opp2'] }}#}
+{% endfor %}
+    {% endif %}
+{% endblock %}

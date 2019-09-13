@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block main %}
+     <form action="/search" method="post">
+        <div class="form-group">
+             Введите название клуба, спортсмена, вид спорта:
+<input type="search" placeholder="Поиск" name="search">
+    <input type="submit">
+        </div>
+     </form>
+    <br>
+{% for event in response['Value'] %}
+{#<iframe src="{{ event['Url'] }}" width="800px" height="600px">Ваш браузер не поддерживает плавающие фреймы!</iframe>#}
+    <a href="event/{{ event['Url'].replace('https://live-stream365.com/online/84bd360faa5112bad32d69407a25e53d/','')}}">{{ event['Sport']}} {{event['Liga']}} {{event['Opp1']}} {{event['Opp2'] }}</a><br>
+{#<input type="search" placeholder="Поиск" name="search">#}
+{#    <input type="submit">#}
+{% endfor %}
+
+{% endblock %}
