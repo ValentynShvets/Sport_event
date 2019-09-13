@@ -1,0 +1,11 @@
+flask
+datetime
+apiclient
+oauth2client
+httplib2
+flask_session
+Jinja2
+rails
+gevent
+gunicorn
+requests
