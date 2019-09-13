@@ -2,12 +2,7 @@ from flask import Flask, flash, jsonify, redirect, render_template, request, ses
 from flask_session.__init__ import Session
 from tempfile import mkdtemp
 import requests
-# from mysite import db
-import mysql.connector
-from functools import wraps
-# from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
-from werkzeug.security import check_password_hash, generate_password_hash
-import datetime
+
 
 app = Flask(__name__)
 # app.config.from_object('app_config')
